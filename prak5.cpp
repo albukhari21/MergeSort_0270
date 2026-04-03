@@ -53,3 +53,18 @@ void mergeSort(int low, int high)
     int i = low;      // step 4.a
     int j = mid + 1;  // step 4.b (Catatan: di gambar tertulis mid - 1, namun logika merge sort biasanya mid + 1)
     int k = low;      // step 4.c
+
+    while (i <= mid && j <= high) // step 4.d
+    {
+        if (arr[i] <= arr[j]) // step 4.d.i
+        {
+            B[k] = arr[i];
+            i++;
+        }
+        else
+        {
+            B[k] = arr[j];
+            j++;
+        }
+        k++; // step 4.d.ii
+    }
